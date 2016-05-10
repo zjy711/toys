@@ -1,0 +1,16 @@
+%h1 Welcome to the books page!
+
+%table
+  %thead
+    %tr
+      %td Name
+      %td Author
+
+  %tbody
+    - @books.each do |book|
+      %tr
+        %td= book.name
+        %td= book.author
+
+.create_new_book
+  = link_to 'Create new book', new_book_path

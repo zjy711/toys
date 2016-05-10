@@ -1,0 +1,10 @@
+%h1 Welcome to create a new book!
+
+= form_for Book.new do |f|
+  .name
+    = f.label :name
+    = f.text_field :name
+  .author
+    = f.label :author
+    = f.text_field :author
+  = f.submit 'Create'
